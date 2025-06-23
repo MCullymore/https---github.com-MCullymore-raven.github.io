@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Velocity AutoSport</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+    }
+    .navbar {
+      background-color: #222;
+    }
+    .navbar-brand {
+      color: #e30613 !important;
+      font-weight: bold;
+    }
+    .nav-link {
+      color: #fff !important;
+    }
+    .hero {
+      background: url('https://via.placeholder.com/1600x600') center/cover no-repeat;
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      color: #fff;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    .section-title {
+      color: #407ee1;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .card {
+      background-color: #1c1c1c;
+      border: none;
+      color: #fff;
+    }
+    .card img {
+      border-radius: 0.5rem 0.5rem 0 0;
+    }
+    footer {
+      background-color: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 1.5rem 0;
+    }
+    .navbar-brand img {
+        max-height: 50px;
+        width: auto;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="images/logo.png" alt="Raven Autosports Logo" height="50" class="me-2">
+      </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#dyno">Dyno</a></li>
+            <li class="nav-item"><a class="nav-link" href="#parts">Parts</a></li>
+            <li class="nav-item"><a class="nav-link" href="#repairs">Repairs</a></li>
+          </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1>Driven by Performance</h1>
+    <p>Top-tier auto sport solutions for racers and enthusiasts alike.</p>
+  </div>
+</section>
+<section id="showcase" class="py-5 bg-black">
+    <div class="container">
+      <h2 class="section-title">Showcase Gallery</h2>
+      <div id="carShowcase" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/showcase/car1.jpg" class="d-block w-100" alt="Car 1">
+          </div>
+          <div class="carousel-item">
+            <img src="images/showcase/car2.jpg" class="d-block w-100" alt="Car 2">
+          </div>
+          <div class="carousel-item">
+            <img src="images/showcase/car3.jpg" class="d-block w-100" alt="Car 3">
+          </div>
+          <div class="carousel-item">
+            <img src="images/showcase/car4.jpg" class="d-block w-100" alt="Car 4">
+          </div>
+          <div class="carousel-item">
+            <img src="images/showcase/car5.jpg" class="d-block w-100" alt="Car 5">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carShowcase" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carShowcase" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+  
+<!-- Dyno Tuning -->
+<section id="dyno" class="py-5 bg-dark">
+    <div class="container">
+      <h2 class="section-title">Dyno Tuning</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/dyno1.jpg" class="card-img-top" alt="Dyno Run">
+            <div class="card-body">
+              <h5 class="card-title">Precision Tuning</h5>
+              <p class="card-text">Get your vehicle dialed in on our in-house dyno with expert tuning services.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/dyno2.jpg" class="card-img-top" alt="ECU Mapping">
+            <div class="card-body">
+              <h5 class="card-title">Custom ECU Mapping</h5>
+              <p class="card-text">Tailored performance tuning for max power, efficiency, or race setup.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/dyno3.jpg" class="card-img-top" alt="Diagnostics">
+            <div class="card-body">
+              <h5 class="card-title">Power Diagnostics</h5>
+              <p class="card-text">Real-time data and horsepower graphs to track your vehicle’s gains.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Performance Parts -->
+  <section id="parts" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Performance Parts</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/parts1.jpg" class="card-img-top" alt="Intake Systems">
+            <div class="card-body">
+              <h5 class="card-title">Intakes & Exhausts</h5>
+              <p class="card-text">Top-quality bolt-on parts to improve airflow and performance.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/parts2.jpg" class="card-img-top" alt="Suspension">
+            <div class="card-body">
+              <h5 class="card-title">Suspension & Handling</h5>
+              <p class="card-text">Coilovers, sway bars, and chassis upgrades to tighten your ride.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/parts3.jpg" class="card-img-top" alt="Brakes">
+            <div class="card-body">
+              <h5 class="card-title">Brake Upgrades</h5>
+              <p class="card-text">Performance pads, rotors, and kits to stop with confidence.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Repairs & Maintenance -->
+  <section id="repairs" class="py-5 bg-dark">
+    <div class="container">
+      <h2 class="section-title">Repairs & Maintenance</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/repairs1.jpg" class="card-img-top" alt="General Repairs">
+            <div class="card-body">
+              <h5 class="card-title">Mechanical Repairs</h5>
+              <p class="card-text">Engine, transmission, drivetrain, and more — fully licensed service.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/repairs2.jpg" class="card-img-top" alt="Oil Changes">
+            <div class="card-body">
+              <h5 class="card-title">Oil & Fluids</h5>
+              <p class="card-text">Synthetic oil changes, coolant flushes, and brake service.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/repairs3.jpg" class="card-img-top" alt="Inspections">
+            <div class="card-body">
+              <h5 class="card-title">Diagnostics & Inspections</h5>
+              <p class="card-text">Check engine lights, pre-track inspections, and fault code scanning.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    &copy; 2025 Raven AutoSport. All rights reserved.
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
