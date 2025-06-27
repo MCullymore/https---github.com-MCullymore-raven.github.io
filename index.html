@@ -52,6 +52,17 @@
       text-align: center;
       padding: 1.5rem 0;
     }
+    .icon-title {
+          position: relative; /* Needed for absolute positioning of the icon */
+        }
+
+        .icon-title-dyno::before { /* Or ::after for after */
+          content: url("/images/DynoIcon.gif"); /* Replace with your icon path */
+          position: absolute;
+          left: -20px; /* Adjust as needed to position the icon */
+          top: 50%;
+          transform: translateY(-50%);
+        }
   </style>
 </head>
 <body>
@@ -86,7 +97,7 @@
 </section>
 <section id="showcase" class="py-5 bg-black">
     <div class="container">
-      <h2 class="section-title">Showcase Gallery</h2>
+      <h2  class="section-title">Showcase Gallery</h2>
       <div id="carShowcase" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -112,7 +123,7 @@
 <!-- Dyno Tuning -->
 <section id="dyno" class="py-5 bg-dark">
     <div class="container">
-      <h2 class="section-title">Dyno Load Bearing Tuning</h2>
+      <h2 class="section-title-dyno">Dyno Load Bearing Tuning</h2>
       <div class="row g-4">
         <div class="col-md-4">
           <div class="card">
