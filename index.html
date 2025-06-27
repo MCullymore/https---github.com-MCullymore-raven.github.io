@@ -62,6 +62,18 @@
           left: -20px; /* Adjust as needed to position the icon */
           top: 50%;
           transform: translateY(-50%);
+          .icon-title-service::before { /* Or ::after for after */
+          content: url("/images/RepairsIcon.gif"); /* Replace with your icon path */
+          position: absolute;
+          left: -20px; /* Adjust as needed to position the icon */
+          top: 50%;
+          transform: translateY(-50%);
+          .icon-title-performance::before { /* Or ::after for after */
+          content: url("/images/PerPartsIcon.gif"); /* Replace with your icon path */
+          position: absolute;
+          left: -20px; /* Adjust as needed to position the icon */
+          top: 50%;
+          transform: translateY(-50%);
         }
   </style>
 </head>
@@ -127,7 +139,6 @@
       <div class="row g-4">
         <div class="col-md-4">
           <div class="card">
-            <img src="images/DynoIcon.gif" class="card-img-top" alt="Dyno Run">
             <div class="card-body">
               <h5 class="card-title">Precision Tuning</h5>
               <p class="card-text">Get your vehicle dialed in on our in-house dyno with expert tuning services.</p>
@@ -136,7 +147,6 @@
         </div>
         <div class="col-md-4">
           <div class="card">
-            <img src="images/DynoIcon.gif" class="card-img-top" alt="ECU Mapping">
             <div class="card-body">
               <h5 class="card-title">Custom ECU Mapping</h5>
               <p class="card-text">Tailored performance tuning for max power, efficiency, or race setup.</p>
@@ -145,7 +155,6 @@
         </div>
         <div class="col-md-4">
           <div class="card">
-            <img src="images/DynoIcon.gif" class="card-img-top" alt="Diagnostics">
             <div class="card-body">
               <h5 class="card-title">Power Diagnostics</h5>
               <p class="card-text">Real-time data and horsepower graphs to track your vehicle’s gains.</p>
@@ -159,11 +168,10 @@
   <!-- Performance serviceandrepair -->
   <section id="serviceandrepair" class="py-5">
     <div class="container">
-      <h2 class="section-title">Service and repair</h2>
+      <h2 class="section-title-service">Service and repair</h2>
       <div class="row g-4">
         <div class="col-md-4">
           <div class="card">
-            <img src="images/RepairsIcon.gif" class="card-img-top" alt="MVI">
             <div class="card-body">
               <h5 class="card-title">Motor Vehicle Inspections</h5>
               <p class="card-text">Top-quality bolt-on parts.</p>
@@ -172,7 +180,6 @@
         </div>
         <div class="col-md-4">
           <div class="card">
-            <img src="images/RepairsIcon.gif" class="card-img-top" alt="Exhaust">
             <div class="card-body">
               <h5 class="card-title">Exhaust</h5>
               <p class="card-text">upgrades to your ride.</p>
@@ -180,8 +187,7 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card">
-            <img src="images/RepairsIcon.gif" class="card-img-top" alt="Brakes">
+          <div class="card">=
             <div class="card-body">
               <h5 class="card-title">Brakes</h5>
               <p class="card-text">Performance pads, rotors, and kits to stop with confidence.</p>
@@ -196,11 +202,10 @@
   <!-- Repairs & Maintenance -->
   <section id="performance" class="py-5 bg-dark">
     <div class="container">
-      <h2 class="section-title">Performance Parts</h2>
+      <h2 class="section-title-performance">Performance Parts</h2>
       <div class="row g-4">
         <div class="col-md-4">
           <div class="card">
-            <img src="images//PerPartsIcon.gif" class="card-img-top" alt="Tunning">
             <div class="card-body">
               <h5 class="card-title">Parts</h5>
               <p class="card-text">Engine, transmission, drivetrain, and more — fully licensed.</p>
@@ -209,7 +214,6 @@
         </div>
        <div class="col-md-4">
           <div class="card">
-            <img src="images/RepairsIcon.gif" class="card-img-top" alt="After Market">
             <div class="card-body">
               <h5 class="card-title">After Market Parts </h5>
               <p class="card-text">sales and installation.</p>
