@@ -52,18 +52,9 @@
       text-align: center;
       padding: 1.5rem 0;
     }
-    .icon-title-dyno {
-          position: relative; /* Needed for absolute positioning of the icon */
-        }
-
-        .icon-title-dyno::before { /* Or ::after for after */
-          content: url("/images/DynoIcon.gif"); /* Replace with your icon path */
-          position: absolute;
-          left: -20px; /* Adjust as needed to position the icon */
-          top: 50%;
-           color: #e30613;
-          transform: translateY(-50%);
-         
+    .icon-title-container {
+          display: flex;
+          align-items: center; /* Vertically center */
         }
   </style>
 </head>
@@ -125,7 +116,11 @@
 <!-- Dyno Tuning -->
 <section id="dyno" class="py-5 bg-dark">
     <div class="container">
-      <h2 class="icon-title-dyno">Dyno Load Bearing Tuning</h2>
+      <div class="icon-title-container">
+          <img src="images/DynoIcon.gif" alt="Icon">
+           <h2 >Dyno Load Bearing Tuning</h2>
+        </div>
+     
       <div class="row g-4">
         <div class="col-md-4">
           <div class="card">
