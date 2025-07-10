@@ -13,9 +13,9 @@
        let touchstartX = 0
     let touchendX = 0
 
-    function checkDirection() {
-      if (touchendX < touchstartX) alert('swiped left!')
-      if (touchendX > touchstartX) alert('swiped right!')
+    function checkDirection(e) {
+      if (touchendX < touchstartX)  alert(e.target);
+      if (touchendX > touchstartX)  alert(e.target);
     }
 
     document.addEventListener('touchstart', e => {
@@ -24,7 +24,7 @@
 
     document.addEventListener('touchend', e => {
       touchendX = e.changedTouches[0].screenX
-      checkDirection()
+      checkDirection(e)
     })
   </script>
 </head>
@@ -52,7 +52,7 @@
   </nav>
 
   <!-- Hero -->
-  <section class="hero py-5  bg-dark">
+  <section id="Header" class="hero py-5  bg-dark">
     <div class="container">
       <div class="row align-items-center">
         <!-- Image -->
