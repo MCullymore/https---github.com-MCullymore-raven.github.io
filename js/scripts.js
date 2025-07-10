@@ -1,8 +1,4 @@
-document.addEventListener('click', () => {
-    const video = document.getElementById('promoVideo');
-    video.muted = false;
-    video.play();
-}, { once: true }); // Run only once after first click
+
 const video = document.getElementById('promoVideo');
 const overlay = document.getElementById('unmuteOverlay');
 
