@@ -45,10 +45,15 @@
 
         .tag {
             font-size: .75rem;
-            border: 1px solid rgba(255, 255, 255, .2);
-            padding: .15rem .5rem;
+            color: #111;
+            /* dark text */
+            background-color: #f8f9fa;
+            /* light background */
+            border: 1px solid #ccc;
+            padding: .2rem .6rem;
             border-radius: 999px;
-            margin-right: .25rem
+            margin-right: .25rem;
+            font-weight: 500;
         }
 
         .muted {
@@ -122,18 +127,11 @@
 
             <!-- Grid -->
             <div id="grid" class="gallery-grid">
-                <!-- GALLERY ITEM TEMPLATE EXPLANATION:
-        Duplicate a .gallery-item. Update:
-          - img src to your file under images/gallery/
-          - data-tags="comma,separated,tags"
-          - data-date="YYYY-MM-DD"
-          - data-title to title text
-      -->
 
                 <article class="gallery-item" data-tags="dyno,haltech,tune" data-date="2025-08-12"
                     data-title="Haltech Dyno Session">
                     <div class="card gallery-card">
-                        <img src="images/gallery/sample1.jpg" alt="Haltech Dyno Session" loading="lazy" />
+                        <img src="images/gallery/car1.jpg" alt="Car 1" loading="lazy" />
                         <div class="card-body">
                             <h6 class="mb-1">Haltech Dyno Session</h6>
                             <div class="mb-1">
@@ -147,9 +145,9 @@
                 </article>
 
                 <article class="gallery-item" data-tags="supercharger,whipple,ford" data-date="2025-07-01"
-                    data-title="Whipple Install – F-150">
+                    data-title="Whipple Install - F-150">
                     <div class="card gallery-card">
-                        <img src="images/gallery/sample2.jpg" alt="Whipple Install" loading="lazy" />
+                        <img src="images/gallery/car2.jpg" alt="Car 2" loading="lazy" />
                         <div class="card-body">
                             <h6 class="mb-1">Whipple Install – F-150</h6>
                             <div class="mb-1">
@@ -165,7 +163,7 @@
                 <article class="gallery-item" data-tags="turbo,hellion,drag" data-date="2025-09-10"
                     data-title="Hellion Twin Turbo Build">
                     <div class="card gallery-card">
-                        <img src="images/gallery/sample3.jpg" alt="Hellion Twin Turbo" loading="lazy" />
+                        <img src="images/gallery/car3.jpg" alt="Car 3" loading="lazy" />
                         <div class="card-body">
                             <h6 class="mb-1">Hellion Twin Turbo Build</h6>
                             <div class="mb-1">
@@ -181,7 +179,7 @@
                 <article class="gallery-item" data-tags="exhaust,borla,sound" data-date="2025-06-15"
                     data-title="Borla Exhaust Upgrade">
                     <div class="card gallery-card">
-                        <img src="images/gallery/sample4.jpg" alt="Borla Exhaust" loading="lazy" />
+                        <img src="images/gallery/car4.jpg" alt="Car 4" loading="lazy" />
                         <div class="card-body">
                             <h6 class="mb-1">Borla Exhaust Upgrade</h6>
                             <div class="mb-1">
@@ -197,7 +195,7 @@
                 <article class="gallery-item" data-tags="wheels,touchless,tires" data-date="2025-05-20"
                     data-title="Touchless Tire Mounting">
                     <div class="card gallery-card">
-                        <img src="images/gallery/sample5.jpg" alt="Touchless Tire Mounting" loading="lazy" />
+                        <img src="images/gallery/car5.jpg" alt="Car 5" loading="lazy" />
                         <div class="card-body">
                             <h6 class="mb-1">Touchless Tire Mounting</h6>
                             <div class="mb-1">
@@ -206,6 +204,22 @@
                                 <span class="tag">tires</span>
                             </div>
                             <small class="muted">2025-05-20</small>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="gallery-item" data-tags="repairs,service,maintenance" data-date="2025-04-10"
+                    data-title="Service & Repairs">
+                    <div class="card gallery-card">
+                        <img src="images/gallery/car6.jpg" alt="Car 6" loading="lazy" />
+                        <div class="card-body">
+                            <h6 class="mb-1">Service & Repairs</h6>
+                            <div class="mb-1">
+                                <span class="tag">repairs</span>
+                                <span class="tag">service</span>
+                                <span class="tag">maintenance</span>
+                            </div>
+                            <small class="muted">2025-04-10</small>
                         </div>
                     </div>
                 </article>
