@@ -195,7 +195,7 @@ async function run() {
 
   for (const file of files) {
     const src = path.join(INPUT_DIR, file);
-    var dest = path.join(OUTPUT_DIR, file);
+    let dest = path.join(OUTPUT_DIR, file);
 
     const { year, make, model, description } = await analyzeImage(src);
     // Skip “unknown” or empty vehicles — don’t write to HTML
@@ -208,34 +208,43 @@ async function run() {
 
     // Copy image into processed folder (keep everything, even if fields are empty)
     // Clean naming and handle empty fields
-    function safeName(str) {
-      return str.replace(/[^a-z0-9]+/gi, "_").replace(/^_+|_+$/g, "").toLowerCase();
-    }
 
-    // Build new file name from make/model/year
-    const cleanMake = safeName(make) || "unknown";
-    const cleanModel = safeName(model) || "vehicle";
-    const cleanYear = safeName(year) || "noyear";
+    // Safe naming utility
+function safeName(str) {
+  return str.replace(/[^a-z0-9]+/gi, "_").replace(/^_+|_+$/g, "").toLowerCase();
+}
 
-    // New filename example: ford_mustang_2018.jpg
-    var newFileName = `${cleanMake}_${cleanModel}_${cleanYear}${path.extname(file)}`;
-    dest = path.join(OUTPUT_DIR, newFileName);
+const cleanMake  = safeName(make);
+const cleanModel = safeName(model);
+const cleanYear  = safeName(year);
+const baseName   = `${cleanMake}_${cleanModel}_${cleanYear}`;
+const ext        = path.extname(file);
 
-    // Copy and rename the processed image
-    fs.copyFileSync(src, dest);
+// Build destination file path, auto-increment if duplicate exists
+let counter = 1;
+let newFileName = `${baseName}${ext}`;
+dest = path.join(OUTPUT_DIR, newFileName);
 
-    const title = [year, make, model].filter(Boolean).join(" ") || path.basename(file);
-    const rel = path.relative(path.dirname(OUTPUT_HTML), dest).split(path.sep).join("/");
+// Loop until unique filename found
+while (fs.existsSync(dest)) {
+  newFileName = `${baseName}_${counter}${ext}`;
+  dest = path.join(OUTPUT_DIR, newFileName);
+  counter++;
+}
 
+// Copy recognized file only
+fs.copyFileSync(src, dest);
+log(`✅ Copied recognized image as ${newFileName}`);
 
-
-    if (!hasValidData) {
+// Build gallery HTML for valid vehicles
+const title = [year, make, model].filter(Boolean).join(" ");
+const rel = path.relative(path.dirname(OUTPUT_HTML), dest).split(path.sep).join("/");
+ if (!hasValidData) {
       log(`⚠️ Skipped unknown vehicle: ${file}`);
       return; // skip writing this <article>
     }
 
-    // Only include in HTML if the AI recognized a real vehicle
-    html += `
+html += `
   <article class="col-md-6 col-lg-4 gallery-item"
            data-year="${year}" data-make="${make}" data-model="${model}"
            data-desc="${(description || "").replace(/"/g, "&quot;")}">
